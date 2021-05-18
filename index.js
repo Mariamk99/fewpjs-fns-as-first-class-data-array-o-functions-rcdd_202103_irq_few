@@ -16,13 +16,5 @@ function walkHome(dogName, dogBreed) {
 function unleashDog(dogName, dogBreed) {
   return `Unleash ${dogName} the ${dogBreed}`;
 }
-let routine=[wakeDog, leashDog,
-walkToPark,
-throwFrisbee,
-walkHome,
-unleashDog];
-function exerciseDog(dogName,dogBreed){
-  for (let i=0; i<routine.length;i++){
-    console.log(routine[i](dogName, dogBreed));
-  }
-}
+const routine = [wakeDog, leashDog, walkToPark, throwFrisbee, walkHome, unleashDog,]
+function exerciseDog(dogName, dogBreed){  let arrayFunction = [];  for (let i = 0; i < routine.length; i++){    routine[i](dogName, dogBreed);    arrayFunction.push(routine[i](dogName, dogBreed));  }  return arrayFunction;}
